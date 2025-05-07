@@ -22,16 +22,94 @@
             font-size: 16px;
             border-radius: 10px;
         }
+
+        body, html{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            scroll-behavior: smooth;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: darkolivegreen;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        #navbar a, #navbar button {
+            color: whitesmoke;
+            background: none;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+
+        #welcome-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkslategray;
+            flex-direction: column;
+        }
+
+        #projects, #profile, #social {background-color: seagreen;}
+
+        .project-tile {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgb(73, 88, 73);
+
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 1rem;
+        }
+
+        @media (max-width: 600px) {#navbar{
+            flex-direction: column;
+
+        }
+    }
+    
     </style>
 </head>
 
-
+<!-- Comment -->
 <nav>
     
 </nav>
 
-<body>
-    
+<body style="background-color: rgb(73, 88, 73);">
+
+    <nav id="navbar">
+        <a href="#welcome-section">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#profile">Profile</a>
+        <a href="#social">Contact</a>
+        <button onclick="goToMenu()">Menu</button>
+    </nav>
+
+    <section id="welcome-section">
+        <h1> Welcome to Landen King's Website.</h1>
+    </section>
+
 
     <div class="bio-box">
         <h1><center>Landen King</center></h1>
@@ -40,9 +118,30 @@
         
     </div>
 
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-tile">
+          <a href="#">Cool Project 1</a>
+          <p>I worked on the frontend and backend.</p>
+        </div>
+      </section>
+    
+      <section id="profile">
+        <h2>About Me</h2>
+        <p>This is a creative profile section telling your journey, style, or resume.</p>
+      </section>
 
+    <p2></p2>
 
-
+    <footer>
+        &copy; Landen King 2025
+      </footer>
+    
+      <script>
+        function goToMenu() {
+          window.location.href = "Photopage.html";
+        }
+        </script>
 
 </body>
 
